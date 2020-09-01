@@ -330,9 +330,7 @@
         }
 
         .advantage__item-icon {
-            g {
-                fill: #fff;
-            }
+            fill: #fff;
         }
     }
 
@@ -366,3 +364,47 @@
 }
 
 //end-advantage
+//start-author
+
+.author {
+    background-image: url(../images/author-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 24px;
+        line-height: 30px;
+        margin-right: 45px;
+        max-width: 260px;
+
+        span {
+            @include f700
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
+
+//end-author
