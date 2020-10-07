@@ -14,7 +14,31 @@ $(function () {
         dots: true,
         arrows: false,
         slidesToShow: 4,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        responsive: [{
+                breakpoint: 1800,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 1441,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.icon-th-list').on('click', function () {
@@ -33,8 +57,12 @@ $(function () {
     });
 
     $('.header__btn-menu').on('click', function () {
-        $('.header__box').toggleClass('active');
+        $('.header__wrapper').toggleClass('active');
     });
+
+    // $('.header__btn-menu').on('click', function () {
+    //     $('.header__box').toggleClass('active');
+    // });
 
     $('.product-one__tabs .tab, .settings__tabs .tab').on('click', function (event) {
         var id = $(this).attr('data-id');
@@ -44,6 +72,8 @@ $(function () {
         $('#' + id).addClass('active-tab').fadeIn();
         return false;
     });
+
+    $('input[type="file"], select').styler();
 
     var mixer = mixitup('.products__inner-box');
 
